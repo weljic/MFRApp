@@ -26,6 +26,27 @@ def get_trained_model():
 
 model = get_trained_model()
 
+with st.expander("Show model probability distribution"):
+    # Load full dataset
+    df = pd.read_csv("data/ai4i2020.csv")
+
+    # Prepare features
+    X, y = prepare_data("data/ai4i2020.csv")
+
+    # Add derived features
+    X = add_derived_features(X)
+
+    # Predict probabilities
+    probs = model.predict_proba(X)[:, 1]
+
+    st.write("Summary statistics:")
+    st.write(pd.Series(probs).describe())
+
+    st.write("Histogram of predicted probabilities:")
+    st.bar_chart(pd.Series(probs))
+
+
+
 # -----------------------------
 # PART 2 — Streamlit UI
 # -----------------------------
