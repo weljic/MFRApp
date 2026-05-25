@@ -1,0 +1,12 @@
+README.md
+setup.py
+src/pdm/__init__.py
+src/pdm/config.py
+src/pdm/data.py
+src/pdm/features.py
+src/pdm/model.py
+src/pdm/serialize.py
+src/pdm.egg-info/PKG-INFO
+src/pdm.egg-info/SOURCES.txt
+src/pdm.egg-info/dependency_links.txt
+src/pdm.egg-info/top_level.txt
